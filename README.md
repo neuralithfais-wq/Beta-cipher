@@ -11,8 +11,19 @@ Built purely for learning and fun.
 
 Author: Neuralithfais-wq
 License: MIT
-"""
 
+## Quick Start
+
+```bash
+git clone https://github.com/neuralithfais-wq/neuralithfais-wq.git
+cd neuralithfais-wq
+python -c "
+from pyarx import encrypt_block, decrypt_block
+key = b'my 16-byte secret'
+pt  = b'hello world!!!!'
+ct  = encrypt_block(pt, key)
+print(decrypt_block(ct, key) == pt)  # True ✅
+"""
 import hashlib
 import struct
 
